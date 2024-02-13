@@ -23,17 +23,17 @@ export class PostsService {
 
   async findOne(id: string) {
     const findOne = await this.postsRepository.findOne(id);
-    return { message: findOne };
+    return { message: "success", item: findOne };
   }
 
   async update(id: string, updatePostDto: UpdatePostDto) {
     const update = await this.postsRepository.update(id, updatePostDto);
-    return update;
+    return { message: "successfully updated" ,item: update };
   }
 
   async remove(id: string) {
     const remove = await this.postsRepository.remove(id);
-    return remove;
+    return {message:"successfully removed"};
   }
 
 }

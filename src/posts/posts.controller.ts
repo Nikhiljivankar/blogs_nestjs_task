@@ -19,19 +19,19 @@ import { ApiTags } from '@nestjs/swagger';
 export class PostsController {
   constructor(private readonly postsService: PostsService) {}
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Post()
   async create(@Body() createPostDto: CreatePostDto) {
     return this.postsService.create(createPostDto);
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get()
   async findAll() {
     return this.postsService.findAll();
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get(':id')
   async findOne(@Param('id') id: string) {
     return this.postsService.findOne(id);

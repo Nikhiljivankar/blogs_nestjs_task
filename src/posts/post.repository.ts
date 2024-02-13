@@ -24,7 +24,7 @@ export class PostsRepository {
   }
 
   async update(id, post): Promise<any> {
-    const update = await this.postModel.findByIdAndUpdate(id, post);
+    const update = await this.postModel.findByIdAndUpdate(id, post,{new: true});
     return update;
   }
 

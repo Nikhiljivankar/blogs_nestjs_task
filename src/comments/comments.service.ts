@@ -14,11 +14,11 @@ export class CommentsService {
 
   async findOne(id: string) {
     const findOne = await this.commentsRepository.findOne(id);
-    return { message: findOne };
+    return { message: "success", item: findOne };
   }
 
   async findAll() {
     const findAll = await this.commentsRepository.findAll();
-    return { message: findAll };
+    return findAll?.length ? { message: "success" ,items: findAll }: {message:" no data found"};;
   }
 }
