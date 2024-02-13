@@ -28,4 +28,7 @@ It is a blog on Nest.js(Passport(JWT+Local)) and MongoDB(Mongoose). You can:
 
 
 please use swagger file to  understand how API's are working.
+at athe time og post creation we have to pass user id in payload 
+please see screen shot for above one.
+
 
